@@ -4,21 +4,20 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.8.16
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.8.16
-    - name: Install dependencies
-      run: |
-        make install
-    - name: Lint with pylint
-      run: |
-        make lint
-    - name: Test with pytest
-      run: |
-        make test
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8.17
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8.16
+      - name: Install dependencies
+        run: |
+          make install
+      - name: Lint with pylint
+        run: |
+          make lint
+      - name: Test with pytest
+        run: |
+          make test
