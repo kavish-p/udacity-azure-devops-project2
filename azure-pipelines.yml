@@ -12,3 +12,25 @@ stages:
             inputs:
               versionSpec: 3.7
             displayName: Use Python 3.7
+
+          - bash: |
+              ls -l
+
+          - bash: |
+              pip install setup
+              pip install -r requirements.txt
+            workingDirectory: $(projectRoot)
+            displayName: Install requirements
+
+          - bash: |
+              make lint
+            displayName: Tests
+
+          - task: ArchiveFiles@2
+            displayName: "Archive files"
+            inputs:
+              rootFolderOrFile: $(System.DefaultWorkingDirectory)/flask-sklearn
+              includeRootFolder: false
+              archiveType: zip
+              archiveFile: $(Build.ArtifactStagingDirectory)/app.zip
+              replaceExistingArchive: true
