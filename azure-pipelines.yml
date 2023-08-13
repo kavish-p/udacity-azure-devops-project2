@@ -33,3 +33,10 @@ stages:
               archiveType: zip
               archiveFile: $(Build.ArtifactStagingDirectory)/app.zip
               replaceExistingArchive: true
+
+          - task: AzureWebApp@1
+            displayName: Deploy App
+            inputs:
+              azureSubscription: "Microsoft Azure Enterprise (ff928f46-57a0-4c17-8e69-047c72391275)"
+              appName: k123webapp
+              package: $(Build.ArtifactStagingDirectory)/app.zip
