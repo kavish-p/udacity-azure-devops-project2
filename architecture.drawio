@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net" modified="2023-08-13T05:48:59.136Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.200" etag="lUdRwMCT_w51TCS2PfKm" version="21.1.3" type="device">
+  <diagram name="Page-1" id="iUy2YltaVtmPPfFZUFqu">
+    <mxGraphModel dx="1595" dy="657" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="y6z-oNosnbKpYwhEisCf-1" value="GitHub Repository" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.github_code;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="-77" y="190" width="76.9" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="y6z-oNosnbKpYwhEisCf-3" value="GitHub Actions" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://seeklogo.com/images/G/github-actions-logo-031704BDC6-seeklogo.com.png;" vertex="1" parent="1">
+          <mxGeometry x="102" y="191.5" width="73" height="73" as="geometry" />
+        </mxCell>
+        <mxCell id="y6z-oNosnbKpYwhEisCf-4" value="Azure DevOps" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/devops/Azure_DevOps.svg;" vertex="1" parent="1">
+          <mxGeometry x="287" y="197.5" width="61" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="y6z-oNosnbKpYwhEisCf-5" value="Azure App Services" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/compute/App_Services.svg;" vertex="1" parent="1">
+          <mxGeometry x="481" y="203.5" width="49" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="y6z-oNosnbKpYwhEisCf-6" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="18" y="231" as="sourcePoint" />
+            <mxPoint x="89" y="231" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y6z-oNosnbKpYwhEisCf-7" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="196" y="227.58" as="sourcePoint" />
+            <mxPoint x="267" y="227.58" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y6z-oNosnbKpYwhEisCf-8" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="379" y="227.58" as="sourcePoint" />
+            <mxPoint x="450" y="227.58" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y6z-oNosnbKpYwhEisCf-9" value="The application code, tests, and pipelines are hosted on GitHub." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#3399FF;" vertex="1" parent="1">
+          <mxGeometry x="-116.07000000000001" y="309" width="155.05" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="y6z-oNosnbKpYwhEisCf-10" value="GitHub Actions is used as CI to run tests upon commit." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#3399FF;" vertex="1" parent="1">
+          <mxGeometry x="60.969999999999985" y="304" width="155.05" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="y6z-oNosnbKpYwhEisCf-11" value="When a commit is pushed, Azure Pipelines deploys the App Service and runs the Locust test." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#3399FF;" vertex="1" parent="1">
+          <mxGeometry x="239.97" y="304" width="155.05" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="y6z-oNosnbKpYwhEisCf-12" value="Azure App Services hosts the prediction model API" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#3399FF;" vertex="1" parent="1">
+          <mxGeometry x="427.97" y="295" width="155.05" height="59" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
