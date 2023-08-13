@@ -51,10 +51,50 @@ az webapp up --name k123webapp --resource-group hackaton --runtime "PYTHON:3.8"
 - Create a new pipeline and select GitHub as the source. After authenticating, select your repository and choose Existing YAML file.
   ![alt text](screenshots/misc/03-pipeline-new.png)
 - You would need to make changes to the pipeline YAML file and set your App Service name and Azure Subscription.
+- Upon execution, the pipeline will run the lint test and deploy the App Service.
+- Make a change on the home page of the app. Edit `app.py`.
+
+```
+def home():
+    html = "<h3>Sklearn Prediction Home - deployed from Azure Pipelines</h3>"
+    return html.format(format)
+```
+
+- Rerun the pipeline.
+  ![alt text](screenshots/10-azure-devops.png)
+  ![alt text](screenshots/12-azure-pipeline-test.png)
+  ![alt text](screenshots/11-azure-pipeline-deploy-step.png)
+- The deployed app would have the change made.
+  ![alt text](screenshots/13-pipeline-deploy.png)
+- Run the prediction script and check the logs on Azure Portal.
+  ![alt text](screenshots/08-app-logs-predict.png)
+
+## Load Testing
+
+- Install locust on Azure Cloud Shell or another shell environment.
+
+```
+pip install locust
+```
+
+- Run the test.
+
+```
+locust --headless --users 5 --run-time 5s -H https://k123webapp.azurewebsites.net/
+```
+
+![alt text](screenshots/09-locust-test.png)
+
+- Check the logs of the app service once again.
+  ![alt text](screenshots/14-logs-locust.png)
 
 # Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+- The tests performed in GitHub Actions could be brought over to Azure DevOps.
+- More tests could be included to test the application.
+- The application could include a UI to enable users to make predictions.
+- Different performance test scenarios could be included.
+- The load test could be part of the deployment pipeline.
 
 # Demo
 
